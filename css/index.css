@@ -9,16 +9,8 @@ body {
 }
 
 #text {
+    text-align: center;
     font-size: 5rem;
-}
-
-/*宽度: [641, 1023]*/
-@media (min-width: 641px) {
-    body {
-        width: 100%;
-        margin: auto;
-        background-color: green;
-    }
 }
 
 /*宽度 >= 1024*/
@@ -31,6 +23,21 @@ body {
 
     #user_img img {
         width: 20%;
+        border-radius: 50%;
+    }
+}
+
+/*宽度: [641, 1023]*/
+@media (min-width: 641px) and (max-width: 1023px) {
+    body {
+        width: 100%;
+        margin: auto;
+        background-color: green;
+    }
+
+    #user_img img {
+        width: 30%;
+        border-radius: 50%;
     }
 }
 
@@ -39,6 +46,15 @@ body {
     body {
         width: 100%;
         margin: auto;
-        background-color: rgb(206, 98, 98);
+        background-color: rgb(59, 160, 233);
+    }
+
+    #user_img {
+        text-align: center;
+    }
+
+    #user_img img {
+        width: 50%;
+        border-radius: 50%;
     }
 }
