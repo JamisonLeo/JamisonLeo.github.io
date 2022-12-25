@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+#text {
+    font-size: 5rem;
+}
+
+/*宽度: [641, 1023]*/
+@media (min-width: 641px) {
+    body {
+        width: 100%;
+        margin: auto;
+        background-color: green;
+    }
+}
+
+/*宽度 >= 1024*/
+@media (min-width: 1024px) {
+    body {
+        width: 100%;
+        margin: auto;
+        background-color: aqua;
+    }
+
+    #user_img img {
+        width: 20%;
+    }
+}
+
+/*宽度 <= 640px*/
+@media (max-width: 640px) {
+    body {
+        width: 100%;
+        margin: auto;
+        background-color: rgb(206, 98, 98);
+    }
+}
