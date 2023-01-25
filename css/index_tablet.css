@@ -1,0 +1,12 @@
+@media (min-width: 641px) and (max-width: 1023px) {
+    body {
+        width: 100%;
+        margin: auto;
+        background-color: green;
+    }
+
+    #user_img img {
+        width: 30%;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+#text {
+    text-align: center;
+    font-size: 5rem;
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 100%;
+        margin: auto;
+        background-color: aqua;
+    }
+
+    #user_img img {
+        width: 10%;
+        border-radius: 50%;
+    }
+}
