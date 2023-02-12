@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+@font-face {
+    font-family: 钉钉进步体;
+    src: url(../fonts/DingTalkJinBuTi.ttf);
+}

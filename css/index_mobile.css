@@ -1,16 +1,18 @@
-@media (max-width: 640px) {
-    body {
-        width: 100%;
-        margin: auto;
-        background-color: rgb(59, 160, 233);
-    }
+body {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(226, 226, 226);
+}
 
-    #user_img {
-        text-align: center;
-    }
+#top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
-    #user_img img {
-        width: 50%;
-        border-radius: 50%;
-    }
+#top img {
+    margin: 30px 0 0 20px;
+    width: 35%;
+    border-radius: 50%;
 }
