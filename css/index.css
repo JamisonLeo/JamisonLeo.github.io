@@ -4,59 +4,125 @@ body {
     text-align: center;
 }
 
-form {
-    width: 500px;
-    height: 300px;
-    margin: auto;
-    background-color: rgb(13, 17, 23);
-    border-radius: 10px;
-    border: 1px rgb(66, 67, 68) solid;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+@media screen and (min-width: 1024px) {
+    form {
+        width: 500px;
+        height: 300px;
+        margin: auto;
+        background-color: rgb(13, 17, 23);
+        border-radius: 10px;
+        border: 1px rgb(66, 67, 68) solid;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    #password {
+        padding: 0 20px 0 20px;
+        outline-style: none;
+        border: 1px rgb(66, 67, 68) solid;
+        background-color: rgb(1, 4, 9);
+        color: #fff;
+        margin-top: 70px;
+        width: 350px;
+        height: 50px;
+        font-size: 25px;
+        font-family: '钉钉进步体';
+        border-radius: 5px;
+    }
+
+    #password:focus {
+        border: 1px rgb(88, 166, 255) solid;
+        box-shadow: 0 0 8px rgb(88, 166, 255);
+    }
+
+    #result {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: none;
+        margin-top: 10px;
+        color: red;
+    }
+
+    #button {
+        outline-style: none;
+        border: 0;
+        margin-top: 60px;
+        width: 100px;
+        height: 50px;
+        font-size: 23px;
+        font-family: '钉钉进步体';
+        background-color: rgb(35, 134, 54);
+        color: #fff;
+        border-radius: 20px;
+    }
+
+    #button:hover {
+        background-color: rgb(57, 195, 82);
+    }
 }
 
-#password {
-    padding: 0 20px 0 20px;
-    outline-style: none;
-    border: 1px rgb(66, 67, 68) solid;
-    background-color: rgb(1, 4, 9);
-    color: #fff;
-    margin-top: 70px;
-    width: 350px;
-    height: 50px;
-    font-size: 25px;
-    font-family: '钉钉进步体';
-    border-radius: 5px;
-}
+@media screen and (max-width: 1023px) {
+    form {
+        width: 90%;
+        height: 550px;
+        margin: auto;
+        background-color: rgb(13, 17, 23);
+        border-radius: 10px;
+        border: 1px rgb(66, 67, 68) solid;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
-#password:focus {
-    border: 1px rgb(88, 166, 255) solid;
-    box-shadow: 0 0 8px rgb(88, 166, 255);
-}
+    #password {
+        padding: 0 20px 0 20px;
+        outline-style: none;
+        border: 1px rgb(66, 67, 68) solid;
+        background-color: rgb(1, 4, 9);
+        color: #fff;
+        margin-top: 100px;
+        width: 80%;
+        height: 100px;
+        font-size: 30px;
+        font-family: '钉钉进步体';
+        border-radius: 5px;
+    }
 
-#result {
-    display: none;
-    margin-top: 10px;
-    color: red;
-}
+    #password:focus {
+        border: 1px rgb(88, 166, 255) solid;
+        box-shadow: 0 0 8px rgb(88, 166, 255);
+    }
 
-#button {
-    outline-style: none;
-    border: 0;
-    margin-top: 60px;
-    width: 100px;
-    height: 50px;
-    font-size: 23px;
-    line-height: 23px;
-    font-family: '钉钉进步体';
-    background-color: rgb(35, 134, 54);
-    color: #fff;
-    border-radius: 20px;
-}
+    #result {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: none;
+        margin-top: 10px;
+        color: red;
+        font-size: 30px;
+    }
 
-#button:hover {
-    background-color: rgb(57, 195, 82);
+    #button {
+        outline-style: none;
+        border: 0;
+        margin-top: 140px;
+        width: 200px;
+        height: 100px;
+        font-size: 50px;
+        font-family: '钉钉进步体';
+        background-color: rgb(35, 134, 54);
+        color: #fff;
+        border-radius: 20px;
+    }
+
+    #button:hover {
+        background-color: rgb(57, 195, 82);
+    }
 }

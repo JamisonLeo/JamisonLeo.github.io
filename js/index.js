@@ -5,7 +5,7 @@ function enter() {
     if (input.value == pwd) {
         location.replace("html/shouye.html");
     } else {
-        result.innerText = "密码错误！请联系管理员：liujunxian1025@qq.com";
+        result.innerText = "密码错误！\n请联系管理员：liujunxian1025@qq.com";
         result.style.display = "block";
     }
 }
