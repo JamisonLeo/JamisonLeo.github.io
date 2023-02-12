@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ch_CN">
+<html lang="ch">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/index_pc.css" media="screen and (min-width: 1024px)">
     <link rel="stylesheet" href="../css/index_tablet.css" media="screen and (min-width: 641px) and (max-width: 1023px)">
     <link rel="stylesheet" href="../css/index_mobile.css" media="screen and (max-width: 640px)">
+    <script src="../js/index_mobile.js"></script>
     <title>分享</title>
 </head>
 
@@ -20,10 +21,22 @@
     <div id="body"></div>
     <div id="bottom">
         <ul id="menu">
-            <li><img src="../images/video.png" alt="视频"><p>视频</p></li>
-            <li><img src="../images/picture.png" alt="图片"><p>图片</p></li>
-            <li><img src="../images/code.png" alt="代码"><p>代码</p></li>
-            <li><img src="../images/directory.png" alt="文件"><p>文件</p></li>
+            <li onclick="changeVideo()">
+                <img id="video" src="../images/video1.png" alt="视频">
+                <p id="text1" style="color: rgb(125, 197, 235)">视频</p>
+            </li>
+            <li onclick="changePicture()">
+                <img id="picture" src="../images/picture.png" alt="图片">
+                <p id="text2">图片</p>
+            </li>
+            <li onclick="changeCode()">
+                <img id="code" src="../images/code.png" alt="代码">
+                <p id="text3">代码</p>
+            </li>
+            <li onclick="changeDirectory()">
+                <img id="directory" src="../images/directory.png" alt="文件">
+                <p id="text4">文件</p>
+            </li>
         </ul>
     </div>
 </body>
