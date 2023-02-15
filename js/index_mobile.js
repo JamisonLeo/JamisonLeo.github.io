@@ -49,3 +49,29 @@ function changeDirectory() {
     document.getElementById("directory").setAttribute("style", "fill: rgb(125, 197, 235)");
     document.getElementById("text4").style.color = "rgb(125, 197, 235)";
 }
+
+var flagJava = true;
+
+function rotateJava() {
+    if (flagJava) {
+        document.getElementById("Java").style.transition = ".2s";
+        document.getElementById("Java").style.transform = "rotate(90deg)";
+        flagJava = false;
+    } else {
+        document.getElementById("Java").style.transform = "rotate(0deg)";
+        flagJava = true;
+    }
+}
+
+var flagMySQL = true;
+
+function rotateMySQL() {
+    if (flagMySQL) {
+        document.getElementById("MySQL").style.transition = ".2s";
+        document.getElementById("MySQL").style.transform = "rotate(90deg)";
+        flagMySQL = false;
+    } else {
+        document.getElementById("MySQL").style.transform = "rotate(0deg)";
+        flagMySQL = true;
+    }
+}

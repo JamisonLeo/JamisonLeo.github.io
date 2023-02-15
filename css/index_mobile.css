@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(197, 230, 249);
+    overflow: hidden;
 }
 
 #top {
@@ -30,6 +31,8 @@ body {
 #top div img {
     width: 130px;
     border-radius: 50%;
+    box-shadow: 0 0 3px rgb(226, 226, 226);
+    pointer-events: none;
 }
 
 #top span {
@@ -42,9 +45,11 @@ body {
     padding-top: 60px;
     font-family: "钉钉进步体";
     text-align: center;
+    user-select: none;
 }
 
-#body {
+#body1, #body2, #body3, #body4 {
+    display: block;
     position: fixed;
     left: 0;
     top: 180px;
@@ -54,6 +59,39 @@ body {
     border-radius: 0 30px 0 0;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
     z-index: 999999;
+    overflow: auto;
+}
+
+#body2, #body3, #body4 {
+    display: none;
+}
+
+.Java {
+    margin-top: 20px;
+}
+
+
+.Java, .MySQL {
+    padding: 0 20px;
+    height: 55px;
+    display: flex;
+}
+
+.Java:active, .MySQL:active {
+    background-color: rgb(245, 245, 245);
+}
+
+.Java p, .MySQL p {
+    font-size: 20px;
+    line-height: 53px;
+    font-family: "钉钉进步体";
+    flex: 20;
+    user-select: none;
+}
+
+.Java svg, .MySQL svg {
+    margin: 20px;
+    flex: 1;
 }
 
 #bottom {
@@ -61,7 +99,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 40px;
-    padding: 2px 0;
+    padding: 2px 0 8px 0;
     background-color: #fff;
     border-top: 1px rgb(191, 191, 191) solid;
     z-index: 9999999;
