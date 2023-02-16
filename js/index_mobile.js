@@ -1,4 +1,8 @@
 function changeVideo() {
+    document.getElementById("body1").style.display = "block";
+    document.getElementById("body2").style.display = "none";
+    document.getElementById("body3").style.display = "none";
+    document.getElementById("body4").style.display = "none";
     document.getElementById("video").setAttribute("style", "fill: rgb(125, 197, 235)");
     document.getElementById("text1").style.color = "rgb(125, 197, 235)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
@@ -12,6 +16,10 @@ function changeVideo() {
 }
 
 function changePicture() {
+    document.getElementById("body1").style.display = "none";
+    document.getElementById("body2").style.display = "block";
+    document.getElementById("body3").style.display = "none";
+    document.getElementById("body4").style.display = "none";
     document.getElementById("video").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text1").style.color = "rgb(191, 191, 191)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(125, 197, 235)");
@@ -25,6 +33,10 @@ function changePicture() {
 }
 
 function changeCode() {
+    document.getElementById("body1").style.display = "none";
+    document.getElementById("body2").style.display = "none";
+    document.getElementById("body3").style.display = "block";
+    document.getElementById("body4").style.display = "none";
     document.getElementById("video").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text1").style.color = "rgb(191, 191, 191)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
@@ -38,6 +50,10 @@ function changeCode() {
 }
 
 function changeDirectory() {
+    document.getElementById("body1").style.display = "none";
+    document.getElementById("body2").style.display = "none";
+    document.getElementById("body3").style.display = "none";
+    document.getElementById("body4").style.display = "block";
     document.getElementById("video").setAttribute("style", "fill: rgb(205, 205, 205)");
     document.getElementById("text1").style.color = "rgb(191, 191, 191)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
