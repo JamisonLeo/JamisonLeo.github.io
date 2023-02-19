@@ -1,15 +1,119 @@
-#text {
-    text-align: center;
-    font-size: 5rem;
+html {
+    height: 100%;
 }
 
 body {
     width: 100%;
+    height: 100%;
     margin: auto;
     background-color: aqua;
+    display: flex;
 }
 
-#user_img img {
-    width: 10%;
+#bottom {
+    display: none;
+}
+
+#top {
+    height: 100%;
+    flex-direction: row;
+    flex: 1;
+    text-align: center;
+    background-color: rgb(22, 27, 34);
+    display: flex;
+    flex-direction: column;
+    z-index: 999999;
+}
+
+#top .img {
+    flex-direction: column;
+    flex: 3;
+}
+
+#top div img {
+    margin: 20px 0;
+    width: 150px;
     border-radius: 50%;
+    box-shadow: 0 0 3px rgb(226, 226, 226);
+    pointer-events: none;
+}
+
+#top span {
+    color: #fff;
+    font-size: 40px;
+    font-family: "钉钉进步体";
+    flex-direction: column;
+    flex: 1;
+}
+
+#top_bottom {
+    height: 50%;
+    flex-direction: column;
+    flex: 6;
+}
+
+#menu {
+    height: 100%;
+    padding: 0 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu li:nth-child(1) {
+    margin-top: 80px;
+}
+
+#menu li:nth-child(4) {
+    margin-bottom: 80px;
+}
+
+#menu li {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#menu svg, #menu p {
+    flex: 1;
+}
+
+#menu svg {
+    transform: scale(1.5);
+}
+
+#menu p {
+    font-size: 25px;
+    line-height: 25px;
+    color: rgb(191, 191, 191);
+    font-family: "钉钉进步体";
+}
+
+#body1, #body2, #body3, #body4 {
+    height: 100%;
+    flex-direction: row;
+    flex: 4;
+    background-color: rgb(13, 17, 23);
+}
+
+#body2, #body3, #body4 {
+    display: none;
+}
+
+.Java, .MySQL {
+    padding: 0 40px;
+}
+
+.Java:active, .MySQL:active {
+    background-color: rgb(49, 50, 52);
+}
+
+.Java p, .MySQL p {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 53px;
+    font-family: "钉钉进步体";
+    color: #fff;
+    flex: 20;
+    user-select: none;
 }
