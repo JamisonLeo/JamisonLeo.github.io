@@ -4,15 +4,24 @@ function changeVideo() {
     document.getElementById("body3").style.display = "none";
     document.getElementById("body4").style.display = "none";
     document.getElementById("video").setAttribute("style", "fill: rgb(35, 134, 54)");
+    document.getElementById("top_video").setAttribute("style", "fill: rgb(35, 134, 54)");
     document.getElementById("text1").style.color = "rgb(35, 134, 54)";
+    document.getElementById("top_text1").style.color = "rgb(35, 134, 54)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("picture2").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_picture2").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text2").style.color = "rgb(191, 191, 191)";
     document.getElementById("code1").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_code1").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("code2").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_code2").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text3").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text3").style.color = "rgb(191, 191, 191)";
     document.getElementById("directory").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_directory").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text4").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text4").style.color = "rgb(191, 191, 191)";
 }
 
 function changePicture() {
@@ -21,15 +30,25 @@ function changePicture() {
     document.getElementById("body3").style.display = "none";
     document.getElementById("body4").style.display = "none";
     document.getElementById("video").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_video").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text1").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text1").style.color = "rgb(191, 191, 191)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(35, 134, 54)");
+    document.getElementById("top_picture1").setAttribute("style", "fill: rgb(35, 134, 54)");
     document.getElementById("picture2").setAttribute("style", "fill: rgb(35, 134, 54)");
+    document.getElementById("top_picture2").setAttribute("style", "fill: rgb(35, 134, 54)");
     document.getElementById("text2").style.color = "rgb(35, 134, 54)";
+    document.getElementById("top_text2").style.color = "rgb(35, 134, 54)";
     document.getElementById("code1").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_code1").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("code2").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_code2").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text3").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text3").style.color = "rgb(191, 191, 191)";
     document.getElementById("directory").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_directory").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text4").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text4").style.color = "rgb(191, 191, 191)";
 }
 
 function changeCode() {
@@ -38,15 +57,25 @@ function changeCode() {
     document.getElementById("body3").style.display = "block";
     document.getElementById("body4").style.display = "none";
     document.getElementById("video").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_video").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text1").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text1").style.color = "rgb(191, 191, 191)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("picture2").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_picture2").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text2").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text2").style.color = "rgb(191, 191, 191)";
     document.getElementById("code1").setAttribute("style", "fill: rgb(35, 134, 54)");
+    document.getElementById("top_code1").setAttribute("style", "fill: rgb(35, 134, 54)");
     document.getElementById("code2").setAttribute("style", "fill: rgb(35, 134, 54)");
+    document.getElementById("top_code2").setAttribute("style", "fill: rgb(35, 134, 54)");
     document.getElementById("text3").style.color = "rgb(35, 134, 54)";
+    document.getElementById("top_text3").style.color = "rgb(35, 134, 54)";
     document.getElementById("directory").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_directory").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text4").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text4").style.color = "rgb(191, 191, 191)";
 }
 
 function changeDirectory() {
@@ -55,15 +84,25 @@ function changeDirectory() {
     document.getElementById("body3").style.display = "none";
     document.getElementById("body4").style.display = "block";
     document.getElementById("video").setAttribute("style", "fill: rgb(205, 205, 205)");
+    document.getElementById("top_video").setAttribute("style", "fill: rgb(205, 205, 205)");
     document.getElementById("text1").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text1").style.color = "rgb(191, 191, 191)";
     document.getElementById("picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_picture1").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("picture2").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_picture2").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text2").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text2").style.color = "rgb(191, 191, 191)";
     document.getElementById("code1").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_code1").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("code2").setAttribute("style", "fill: rgb(191, 191, 191)");
+    document.getElementById("top_code2").setAttribute("style", "fill: rgb(191, 191, 191)");
     document.getElementById("text3").style.color = "rgb(191, 191, 191)";
+    document.getElementById("top_text3").style.color = "rgb(191, 191, 191)";
     document.getElementById("directory").setAttribute("style", "fill: rgb(35, 134, 54)");
+    document.getElementById("top_directory").setAttribute("style", "fill: rgb(35, 134, 54)");
     document.getElementById("text4").style.color = "rgb(35, 134, 54)";
+    document.getElementById("top_text4").style.color = "rgb(35, 134, 54)";
 }
 
 var flagJava = true;
