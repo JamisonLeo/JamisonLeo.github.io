@@ -74,7 +74,7 @@ body {
     flex-direction: row;
 }
 
-#top_menu svg, #menu p {
+#top_menu svg, #top_menu p {
     flex: 1;
 }
 
