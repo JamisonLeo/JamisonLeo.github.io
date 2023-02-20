@@ -13,10 +13,19 @@
 </head>
 
 <body>
-    <form name="pwdInput">
+    <form name="pwdInput" onsubmit="return false;">
         <input id="password" type="password" placeholder="请输入访问密码"><br />
         <div id="result"></div>
         <input id="button" type="button" value="确定" onclick="enter()">
+        <script>
+            document.getElementById("password")
+                .addEventListener("keyup", function (event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        document.getElementById("button").click();
+                    }
+                });
+        </script>
     </form>
 </body>
 
