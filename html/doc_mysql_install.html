@@ -41,13 +41,14 @@
         # 设置为MySQL的数据目录<br>
         datadir=D:\\Path\MySQL\\data\\
     </div>
-    <p>端口号课根据个人喜好设置，目录是自己电脑中MySQL目录的位置，其他的和上方保持一致</p>
+    <p>端口号可根据个人喜好设置，尽量使用3306，避免占用其他程序的端口，目录是自己电脑中MySQL目录的位置，其他的和上方保持一致</p>
     <h1 class="step">第三步：</h1>
     <p>在Windows搜索框搜索“命令提示符”，以管理员身份运行，使用 <span class="red">mysqld -install</span> 命令安装MySQL服务</p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>mysqld -install<br>
+        C:\Windows\System32><span class="underline">mysqld -install</span><br>
         Service successfully installed.<br><br>
         C:\Windows\System32>
     </div>
@@ -55,9 +56,10 @@
     <h1 class="step">第四步：</h1>
     <p>使用<span class="red">mysqld --initialize --user=root</span>初始化data目录</p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>mysqld --initialize --user=root<br><br>
+        C:\Windows\System32><span class="underline">mysqld --initialize --user=root</span><br><br>
         C:\Windows\System32>
     </div>
     <p>
@@ -71,22 +73,24 @@
         注意：此时还要使用管理员身份运行命令提示符
     </p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>mysqld --skip-grant-tables --shared-memory<br>
+        C:\Windows\System32><span class="underline">mysqld --skip-grant-tables --shared-memory</span><br>
         |
     </div>
     <p>
-        此时，命令提示符会卡在这里不动，如果是这样就证明操作正确，如果没卡在这里，请跳转：
-        <br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a>
+        此时，命令提示符会卡在这里不动，如果是这样就证明操作正确，如果和上面的窗口有任何差别就发生错误了，请跳转：
+        <a href="#init">删除MySQL服务及初始化MySQL安装目录</a>
     </p>
     <p>
         卡在这里之后，此窗口不要关闭，用管理员身份再打开一个命令提示符，输入<span class="red">mysql -u root</span>
     </p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>mysql -u root<br>
+        C:\Windows\System32><span class="underline">mysql -u root</span><br>
         Welcome to the MySQL monitor. Commands end with ; or \g.<br>
         Your MySQL connection id is 10<br>
         Server version: 8.0.31 MySQL Community Server — GPL<br><br>
@@ -108,6 +112,7 @@
         </span>
     </p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
         C:\Windows\System32>mysql -u root<br>
@@ -119,37 +124,39 @@
         affiliates. Other names may be trademarks of their respective<br>
         owners.<br><br>
         Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.<br><br>
-        mysql>UPDATE mysql.user SET authentication_string=null WHERE User="root";<br>
+        mysql><span class="underline">UPDATE mysql.user SET authentication_string=null WHERE User="root";</span><br>
         Query OK, 1 row affected (0.01sec)<br>
         Rows matched: 1 Changed: 1 Warnings: 0<br><br>
-        mysql>FLUSH PRIVILEGES;<br>
+        mysql><span class="underline">FLUSH PRIVILEGES;</span><br>
         Query OK, 0 rows affected (0.02sec)<br><br>
-        mysql>ALTER USER "root"@"localhost" IDENTIFIED WITH caching_sha2_password BY "自己想设置的密码";<br>
+        mysql><span class="underline">ALTER USER "root"@"localhost" IDENTIFIED WITH caching_sha2_password BY "自己想设置的密码";</span><br>
         Query OK, 0 rows affected (0.01sec)<br><br>
-        mysql>FLUSH PRIVILEGES;<br>
+        mysql><span class="underline">FLUSH PRIVILEGES;</span><br>
         Query OK, 0 rows affected (0.01sec)<br><br>
-        mysql>exit<br>
+        mysql><span class="underline">exit</span><br>
         Bye<br><br>
         C:\Windows\System32>
     </div>
     <h1 class="step">第六步：</h1>
     <p>
         按照图示操作之后，密码就设置完成了，关闭所有命令提示符窗口，并重新以管理员身份运行一个全新的命令提示符窗口，
-        使用<span class="red">&emsp;net start mysql&emsp; </span>启动MySQL服务
+        使用<span class="red">&emsp;net start mysql&emsp; </span>启动MySQL服务。<span class="red">注意：此时是第一次启动MySQL服务。</span>如果前面启动过，请跳转：<a href="#init">删除MySQL服务及初始化MySQL安装目录</a>
     </p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>net start mysql<br>
+        C:\Windows\System32><span class="underline">net start mysql</span><br>
         MySQL 服务正在启动 .<br>
         MySQL 服务已经启动成功。<br><br>
         C:\Windows\System32>
     </div>
     <p>启动MySQL服务之后，就可以登录MySQL系统了，无论是普通运行的命令提示符还是管理员身份运行的都行</p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>mysql -u root -p<br>
+        C:\Windows\System32><span class="underline">mysql -u root -p</span><br>
         Enter password: 输入设置的密码<br>
         Welcome to the MySQL monitor. Commands end with ; or \g.<br>
         Your MySQL connection id is 10<br>
@@ -163,15 +170,17 @@
     </div>
     <p>
         如果到了这里和教程完全一样，恭喜你，MySQL系统已经可以正常使用了！过程中如果出现任何问题，请跳转：
-        <br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a>
     </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <h1 class="step" id="init">初始化操作</h1>
     <p>如果你来到了这个步骤，说明你没有完全按照步骤设置，或者MySQL服务有残留，请按照以下步骤进行初始化</p>
     <p>1.&emsp;首先以管理员身份运行命令提示符，使用<span class="red">net stop mysql</span>停止MySQL服务</p>
     <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
         Microsoft Windows [版本 10.0.22621.1194]<br>
         (c) Microsoft Corporation。保留所有权利。<br><br>
-        C:\Windows\System32>net start mysql<br>
+        C:\Windows\System32><span class="underline">net stop mysql</span><br>
         MySQL 服务正在停止 .<br>
         MySQL 服务已成功停止。<br><br>
         C:\Windows\System32>
