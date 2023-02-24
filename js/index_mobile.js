@@ -118,6 +118,19 @@ function rotateJava() {
     }
 }
 
+var flagJava4 = true;
+
+function rotateJava4() {
+    if (flagJava4) {
+        document.getElementById("Java4").style.transition = ".2s";
+        document.getElementById("Java4").style.transform = "rotate(90deg)";
+        flagJava4 = false;
+    } else {
+        document.getElementById("Java4").style.transform = "rotate(0deg)";
+        flagJava4 = true;
+    }
+}
+
 var flagMySQL = true;
 
 function rotateMySQL() {
@@ -128,5 +141,20 @@ function rotateMySQL() {
     } else {
         document.getElementById("MySQL").style.transform = "rotate(0deg)";
         flagMySQL = true;
+    }
+}
+
+var flagMySQL4 = true;
+
+function rotateMySQL4() {
+    if (flagMySQL4) {
+        document.getElementById("MySQL4").style.transition = ".2s";
+        document.getElementById("MySQL4").style.transform = "rotate(90deg)";
+        document.getElementById("MySQL4_menu").style.display = "block";
+        flagMySQL4 = false;
+    } else {
+        document.getElementById("MySQL4").style.transform = "rotate(0deg)";
+        document.getElementById("MySQL4_menu").style.display = "none";
+        flagMySQL4 = true;
     }
 }

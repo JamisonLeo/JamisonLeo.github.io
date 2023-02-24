@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fonts/DingTalkJinBuTi.ttf">
+    <link rel="stylesheet" href="../fonts/consola.TTF">
+    <link rel="shortcut icon" href="../images/tubiao.png">
+    <link rel="stylesheet" href="../css/init.css">
+    <link rel="stylesheet" href="../css/doc_mysql_install_pc.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="../css/doc_mysql_install_mobile.css" media="screen and (max-width: 1023px)">
+    <title>MySQL8.0配置</title>
+</head>
+<body>
+    <h1 id="top">MySQL8.0及以上版本配置教程 <span>（请严格按照过程进行）</span></h1>
+    <h1 class="step">第一步：</h1>
+    <p>
+        将MySQL文件解压到任意位置，例如&emsp;<span class="red">D:/Path/MySQL</span>，
+        并将MySQL文件夹下的bin目录加到系统的环境变量中，具体操作如图所示（以Windows11系统为例）：
+    </p>
+    <div class="imgBox">
+        <img src="../images/doc_mysql_install/shuxing.png" alt="右键“此电脑，点击“属性”">
+        <img src="../images/doc_mysql_install/gaoji.png" alt="点击高级系统设置">
+        <img src="../images/doc_mysql_install/huanjing.png" alt="点击“环境变量”">
+    </div>
+    <div class="imgBox">
+        <img src="../images/doc_mysql_install/path.png" alt="双击系统变量中的“Path”">
+        <img src="../images/doc_mysql_install/mysqlbin.png" alt="将MySQL的bin目录添加到里面">
+        <img src="../images/doc_mysql_install/empty.png">
+    </div>
+    <h1 class="step">第二步：</h1>
+    <p>
+        在MySQL文件夹下新建 <span class="red">my.ini</span> 文件，输入内容：
+    </p>
+    <div class="notebook">
+        [mysqld]<br>
+        # 设置端口<br>
+        port=3306<br>
+        # 设置为自己MySQL的安装目录<br>
+        basedir=D:\\Path\MySQL\\<br>
+        # 设置为MySQL的数据目录<br>
+        datadir=D:\\Path\MySQL\\data\\
+    </div>
+    <p>端口号课根据个人喜好设置，目录是自己电脑中MySQL目录的位置，其他的和上方保持一致</p>
+    <h1 class="step">第三步：</h1>
+    <p>在Windows搜索框搜索“命令提示符”，以管理员身份运行，使用 <span class="red">mysqld -install</span> 命令安装MySQL服务</p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>mysqld -install<br>
+        Service successfully installed.<br><br>
+        C:\Windows\System32>
+    </div>
+    <p>如图所示即为安装成功，若非显示此内容，请跳转：<a href="#init">删除MySQL服务及初始化MySQL安装目录</a></p>
+    <h1 class="step">第四步：</h1>
+    <p>使用<span class="red">mysqld --initialize --user=root</span>初始化data目录</p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>mysqld --initialize --user=root<br><br>
+        C:\Windows\System32>
+    </div>
+    <p>
+        如图所示后，查看MySQL目录，会多出一个<span class="red">data</span>文件夹，即为初始化成功，
+        若非显示此内容，请跳转：<br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a>
+    </p>
+    <h1 class="step">第五步：</h1>
+    <p>
+        MySQL8.0及以上版本无法通过配置文件跳过安全检查，所以此时需要使用命令跳过安全检查，使用<br>
+        <span class="red">mysqld --skip-grant-tables --shared-memory命令</span>跳过安全检查，
+        注意：此时还要使用管理员身份运行命令提示符
+    </p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>mysqld --skip-grant-tables --shared-memory<br>
+        |
+    </div>
+    <p>
+        此时，命令提示符会卡在这里不动，如果是这样就证明操作正确，如果没卡在这里，请跳转：
+        <br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a>
+    </p>
+    <p>
+        卡在这里之后，此窗口不要关闭，用管理员身份再打开一个命令提示符，输入<span class="red">mysql -u root</span>
+    </p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>mysql -u root<br>
+        Welcome to the MySQL monitor. Commands end with ; or \g.<br>
+        Your MySQL connection id is 10<br>
+        Server version: 8.0.31 MySQL Community Server — GPL<br><br>
+        Copy right (c) 2000, 2022, Oracle and/or its affiliates.<br><br>
+        Oracle is a registered trademark of Oracle Corporation and/or its<br>
+        affiliates. Other names may be trademarks of their respective<br>
+        owners.<br><br>
+        Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.<br><br>
+        mysql>
+    </div>
+    <p>
+        如图所示，就已经进入了MySQL系统，使用如下MySQL指令重置密码：<br>
+        <span class="red">
+            &emsp;&emsp;UPDATE mysql.user SET authentication_string=null WHERE User="root";<br>
+            &emsp;&emsp;FLUSH PRIVILEGES;<br>
+            &emsp;&emsp;ALTER USER "root"@"localhost" IDENTIFIED WITH caching_sha2_password BY "password";<br>
+            &emsp;&emsp;FLUSH PRIVILEGES;<br>
+            &emsp;&emsp;exit;
+        </span>
+    </p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>mysql -u root<br>
+        Welcome to the MySQL monitor. Commands end with ; or \g.<br>
+        Your MySQL connection id is 10<br>
+        Server version: 8.0.31 MySQL Community Server — GPL<br><br>
+        Copy right (c) 2000, 2022, Oracle and/or its affiliates.<br><br>
+        Oracle is a registered trademark of Oracle Corporation and/or its<br>
+        affiliates. Other names may be trademarks of their respective<br>
+        owners.<br><br>
+        Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.<br><br>
+        mysql>UPDATE mysql.user SET authentication_string=null WHERE User="root";<br>
+        Query OK, 1 row affected (0.01sec)<br>
+        Rows matched: 1 Changed: 1 Warnings: 0<br><br>
+        mysql>FLUSH PRIVILEGES;<br>
+        Query OK, 0 rows affected (0.02sec)<br><br>
+        mysql>ALTER USER "root"@"localhost" IDENTIFIED WITH caching_sha2_password BY "自己想设置的密码";<br>
+        Query OK, 0 rows affected (0.01sec)<br><br>
+        mysql>FLUSH PRIVILEGES;<br>
+        Query OK, 0 rows affected (0.01sec)<br><br>
+        mysql>exit<br>
+        Bye<br><br>
+        C:\Windows\System32>
+    </div>
+    <h1 class="step">第六步：</h1>
+    <p>
+        按照图示操作之后，密码就设置完成了，关闭所有命令提示符窗口，并重新以管理员身份运行一个全新的命令提示符窗口，
+        使用<span class="red">&emsp;net start mysql&emsp; </span>启动MySQL服务
+    </p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>net start mysql<br>
+        MySQL 服务正在启动 .<br>
+        MySQL 服务已经启动成功。<br><br>
+        C:\Windows\System32>
+    </div>
+    <p>启动MySQL服务之后，就可以登录MySQL系统了，无论是普通运行的命令提示符还是管理员身份运行的都行</p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>mysql -u root -p<br>
+        Enter password: 输入设置的密码<br>
+        Welcome to the MySQL monitor. Commands end with ; or \g.<br>
+        Your MySQL connection id is 10<br>
+        Server version: 8.0.31 MySQL Community Server — GPL<br><br>
+        Copy right (c) 2000, 2022, Oracle and/or its affiliates.<br><br>
+        Oracle is a registered trademark of Oracle Corporation and/or its<br>
+        affiliates. Other names may be trademarks of their respective<br>
+        owners.<br><br>
+        Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.<br><br>
+        mysql>
+    </div>
+    <p>
+        如果到了这里和教程完全一样，恭喜你，MySQL系统已经可以正常使用了！过程中如果出现任何问题，请跳转：
+        <br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a><br><br><br><br><br><br><br><br><br><br><br><br>
+    </p>
+    <h1 class="step" id="init">初始化操作</h1>
+    <p>如果你来到了这个步骤，说明你没有完全按照步骤设置，或者MySQL服务有残留，请按照以下步骤进行初始化</p>
+    <p>1.&emsp;首先以管理员身份运行命令提示符，使用<span class="red">net stop mysql</span>停止MySQL服务</p>
+    <div class="cmd">
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32>net start mysql<br>
+        MySQL 服务正在停止 .<br>
+        MySQL 服务已成功停止。<br><br>
+        C:\Windows\System32>
+    </div>
+    <p>不管窗口上是否这样显示，直接下一步</p>
+    <p>2.&emsp;通过注册表删除MySQL服务：</p>
+    <p>&emsp;&emsp;Win+R打开“运行”，输入<span class="red">regedit</span>回车<br>
+        &emsp;&emsp;&emsp;&emsp;在注册表上方地址栏输入
+        <span class="red">计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\</span>
+    </p>
+    <p>&emsp;&emsp;在左侧目录找到<span class="red">MySQL</span>右键删除</p>
+    <p>3.&emsp;找到MySQL目录，删除<span class="red">data</span>文件夹</p>
+    <p>4.&emsp;重启电脑，按照步骤操作&emsp;&emsp;<a href="#top">回到顶部</a></p>
+</body>
+</html>

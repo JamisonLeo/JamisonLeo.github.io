@@ -12,3 +12,8 @@ body {
     font-family: 钉钉进步体;
     src: url(../fonts/DingTalkJinBuTi.ttf);
 }
+
+@font-face {
+    font-family: consola;
+    src: url(../fonts/consola.TTF);
+}

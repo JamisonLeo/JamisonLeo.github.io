@@ -117,3 +117,24 @@ body {
     flex: 20;
     user-select: none;
 }
+
+#MySQL4_menu {
+    list-style: none;
+    display: none;
+    padding: 0 80px;
+    font-family: "钉钉进步体";
+}
+
+#MySQL4_menu li {
+    height: 40px;
+    font-size: 20px;
+}
+
+#MySQL4_menu li a {
+    text-decoration: none;
+    color: rgb(141, 141, 141);
+}
+
+#MySQL4_menu li a:hover {
+    color: rgb(159, 232, 174);
+}

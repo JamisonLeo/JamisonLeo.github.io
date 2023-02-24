@@ -128,3 +128,24 @@ body {
     color: rgb(191, 191, 191);
     font-family: "钉钉进步体";
 }
+
+#MySQL4_menu {
+    list-style: none;
+    display: none;
+    padding: 0 60px;
+    font-family: "钉钉进步体";
+}
+
+#MySQL4_menu li {
+    height: 40px;
+    font-size: 20px;
+}
+
+#MySQL4_menu li a {
+    text-decoration: none;
+    color: rgb(141, 141, 141);
+}
+
+#MySQL4_menu li a:active {
+    color: rgb(159, 232, 174);
+}

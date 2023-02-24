@@ -1,0 +1,71 @@
+body {
+    padding: 50px 0;
+    width: 90%;
+    margin: auto;
+    font-family: "钉钉进步体";
+    background-color: rgb(13, 17, 23);
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+h1 span {
+    background-color: red;
+}
+
+h1.step {
+    margin: 30px 0;
+    background-image: linear-gradient(to right, white, rgb(13, 17, 23));
+    color: rgb(0, 0, 0);
+}
+
+p {
+    font-size: 25px;
+    text-indent: 2em;
+}
+
+.imgBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgBox img {
+    padding: 10px 20px;
+    width: 100px;
+    flex: 1;
+}
+
+.notebook {
+    padding: 20px 10px;
+    width: 500px;
+    margin: auto;
+    background-color: #fff;
+    color: black;
+    font-family: consola;
+    line-height: 25px;
+    border-radius: 10px;
+}
+
+.cmd {
+    padding: 20px 10px;
+    width: 850px;
+    margin: auto;
+    background-color: black;
+    color: #fff;
+    font-family: consola;
+    line-height: 25px;
+    border: 1px solid #7d7d7d;
+    border-radius: 10px;
+}
+
+a {
+    font-family: 黑体;
+    text-decoration: none;
+    color: rgb(35, 134, 54);
+}
+
+a:hover {
+    color: rgb(183, 255, 198);
+}
