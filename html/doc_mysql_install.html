@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../css/doc_mysql_install_mobile.css" media="screen and (max-width: 1023px)">
     <title>MySQL8.0配置</title>
 </head>
-<body>
-    <h1 id="top">MySQL8.0及以上版本配置教程 <span>（请严格按照过程进行）</span></h1>
+<body id="top">
+    <h1>MySQL8.0及以上版本配置教程 <span>（请严格按照过程进行）</span></h1>
     <h1 class="step">第一步：</h1>
     <p>
         将MySQL文件解压到任意位置，例如&emsp;<span class="red">D:/Path/MySQL</span>，
@@ -26,7 +26,7 @@
     <div class="imgBox">
         <img src="../images/doc_mysql_install/path.png" alt="双击系统变量中的“Path”">
         <img src="../images/doc_mysql_install/mysqlbin.png" alt="将MySQL的bin目录添加到里面">
-        <img src="../images/doc_mysql_install/empty.png">
+        <img class="empty" src="../images/doc_mysql_install/empty.png">
     </div>
     <h1 class="step">第二步：</h1>
     <p>
@@ -180,7 +180,7 @@
     <p>2.&emsp;通过注册表删除MySQL服务：</p>
     <p>&emsp;&emsp;Win+R打开“运行”，输入<span class="red">regedit</span>回车<br>
         &emsp;&emsp;&emsp;&emsp;在注册表上方地址栏输入
-        <span class="red">计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\</span>
+        <span class="red small">计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\</span>
     </p>
     <p>&emsp;&emsp;在左侧目录找到<span class="red">MySQL</span>右键删除</p>
     <p>3.&emsp;找到MySQL目录，删除<span class="red">data</span>文件夹</p>
