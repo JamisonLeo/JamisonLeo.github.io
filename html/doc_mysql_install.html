@@ -29,6 +29,17 @@
         <img class="empty" src="../images/doc_mysql_install/empty.png">
     </div>
     <h1 class="step">第二步：</h1>
+    <p>验证环境变量是否配置成功，使用<span class="red">mysql --version</span>命令查看MySQL版本号</p>
+    <div class="cmd">
+        <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
+        Microsoft Windows [版本 10.0.22621.1194]<br>
+        (c) Microsoft Corporation。保留所有权利。<br><br>
+        C:\Windows\System32><span class="underline">mysql --version</span><br>
+        mysql  Ver 8.0.32 for Win64 on x86_64 (MySQL Community Server - GPL)<br><br>
+        C:\Windows\System32>
+    </div>
+    <p>版本号可能和教程有所不同，但是显示效果一致即为配置成功！</p>
+    <h1 class="step">第三步：</h1>
     <p>
         在MySQL文件夹下新建 <span class="red">my.ini</span> 文件，输入内容：
     </p>
@@ -42,7 +53,7 @@
         datadir=D:\\Path\MySQL\\data\\
     </div>
     <p>端口号可根据个人喜好设置，尽量使用3306，避免占用其他程序的端口，目录是自己电脑中MySQL目录的位置，其他的和上方保持一致</p>
-    <h1 class="step">第三步：</h1>
+    <h1 class="step">第四步：</h1>
     <p>在Windows搜索框搜索“命令提示符”，以管理员身份运行；或者右键Windows徽标，点击Windows终端（管理员）<br>使用 <span class="red">mysqld -install</span> 命令安装MySQL服务</p>
     <div class="cmd">
         <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
@@ -53,7 +64,7 @@
         C:\Windows\System32>
     </div>
     <p>如图所示即为安装成功，若非显示此内容，请跳转：<a href="#init">删除MySQL服务及初始化MySQL安装目录</a></p>
-    <h1 class="step">第四步：</h1>
+    <h1 class="step">第五步：</h1>
     <p>使用<span class="red">mysqld --initialize --user=root</span>初始化data目录</p>
     <div class="cmd">
         <span class="red underline"><br>标虚线处是输入的内容，&emsp;&emsp;此窗口是“命令提示符”窗口</span><br><br><br>
@@ -66,7 +77,7 @@
         如图所示后，查看MySQL目录，会多出一个<span class="red">data</span>文件夹，即为初始化成功，
         若非显示此内容，请跳转：<br><a href="#init">&emsp;&emsp;删除MySQL服务及初始化MySQL安装目录</a>
     </p>
-    <h1 class="step">第五步：</h1>
+    <h1 class="step">第六步：</h1>
     <p>
         MySQL8.0及以上版本无法通过配置文件跳过安全检查，所以此时需要使用命令跳过安全检查，使用<br>
         <span class="red">mysqld --skip-grant-tables --shared-memory命令</span>跳过安全检查，
@@ -137,9 +148,9 @@
         Bye<br><br>
         C:\Windows\System32>
     </div>
-    <h1 class="step">第六步：</h1>
+    <h1 class="step">第七步：</h1>
     <p>
-        按照图示操作之后，密码就设置完成了，关闭所有命令提示符窗口，并重新以管理员身份运行一个全新的命令提示符窗口，
+        按照图示操作之后，密码就设置完成了，<span class="red">关闭所有命令提示符窗口</span>，并重新以管理员身份运行一个全新的命令提示符窗口，
         使用<span class="red">&emsp;net start mysql&emsp; </span>启动MySQL服务。<span class="red">注意：此时是第一次启动MySQL服务。</span>如果前面启动过，请跳转：<a href="#init">删除MySQL服务及初始化MySQL安装目录</a>
     </p>
     <div class="cmd">
