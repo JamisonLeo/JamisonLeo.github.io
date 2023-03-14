@@ -118,30 +118,37 @@ body {
 }
 
 #Java_menu, #MySQL_menu {
-    list-style: none;
     display: none;
+}
+
+#Java_menu ul, #MySQL_menu ul {
+    height: 450px;
+    overflow: auto;
+    list-style: none;
     font-family: "钉钉进步体";
 }
 
 
-#Java_menu li, #MySQL_menu li {
+#Java_menu ul li, #MySQL_menu ul li {
+    float: left;
+    padding-left: 60px;
     height: 200px;
     width: 300px;
     display: flex;
     flex-direction: column;
 }
 
-#Java_menu li div, #MySQL_menu li div {
+#Java_menu ul li div, #MySQL_menu ul li div {
     color: #fff;
     font-size: 25px;
     text-align: center;
 }
 
-#Java_menu li img, #MySQL_menu li img {
+#Java_menu ul li img, #MySQL_menu ul li img {
     flex: 5;
 }
 
-#Java_menu li div, #MySQL_menu li div {
+#Java_menu ul li div, #MySQL_menu ul li div {
     flex: 1;
 }
 
