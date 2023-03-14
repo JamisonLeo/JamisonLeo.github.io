@@ -117,6 +117,34 @@ body {
     user-select: none;
 }
 
+#Java_menu, #MySQL_menu {
+    list-style: none;
+    display: none;
+    font-family: "钉钉进步体";
+}
+
+
+#Java_menu li, #MySQL_menu li {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Java_menu li div, #MySQL_menu li div {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+#Java_menu li img, #MySQL_menu li img {
+    flex: 5;
+}
+
+#Java_menu li div, #MySQL_menu li div {
+    flex: 1;
+}
+
 #MySQL4_menu {
     list-style: none;
     display: none;

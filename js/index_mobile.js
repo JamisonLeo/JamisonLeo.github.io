@@ -111,10 +111,27 @@ function rotateJava() {
     if (flagJava) {
         document.getElementById("Java").style.transition = ".2s";
         document.getElementById("Java").style.transform = "rotate(90deg)";
+        document.getElementById("Java_menu").style.display = "block";
         flagJava = false;
     } else {
         document.getElementById("Java").style.transform = "rotate(0deg)";
+        document.getElementById("Java_menu").style.display = "none";
         flagJava = true;
+    }
+}
+
+var flagMySQL = true;
+
+function rotateMySQL() {
+    if (flagMySQL) {
+        document.getElementById("MySQL").style.transition = ".2s";
+        document.getElementById("MySQL").style.transform = "rotate(90deg)";
+        document.getElementById("MySQL_menu").style.display = "block";
+        flagMySQL = false;
+    } else {
+        document.getElementById("MySQL").style.transform = "rotate(0deg)";
+        document.getElementById("MySQL_menu").style.display = "none";
+        flagMySQL = true;
     }
 }
 
@@ -128,19 +145,6 @@ function rotateJava4() {
     } else {
         document.getElementById("Java4").style.transform = "rotate(0deg)";
         flagJava4 = true;
-    }
-}
-
-var flagMySQL = true;
-
-function rotateMySQL() {
-    if (flagMySQL) {
-        document.getElementById("MySQL").style.transition = ".2s";
-        document.getElementById("MySQL").style.transform = "rotate(90deg)";
-        flagMySQL = false;
-    } else {
-        document.getElementById("MySQL").style.transform = "rotate(0deg)";
-        flagMySQL = true;
     }
 }
 
