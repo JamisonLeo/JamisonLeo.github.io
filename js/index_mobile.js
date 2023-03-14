@@ -105,7 +105,11 @@ function changeDirectory() {
     document.getElementById("top_text4").style.color = "rgb(35, 134, 54)";
 }
 
+
+
+
 var flagJava = true;
+var flagMySQL = true;
 
 function rotateJava() {
     if (flagJava) {
@@ -113,6 +117,9 @@ function rotateJava() {
         document.getElementById("Java").style.transform = "rotate(90deg)";
         document.getElementById("Java_menu").style.display = "block";
         flagJava = false;
+        document.getElementById("MySQL").style.transform = "rotate(0deg)";
+        document.getElementById("MySQL_menu").style.display = "none";
+        flagMySQL = true;
     } else {
         document.getElementById("Java").style.transform = "rotate(0deg)";
         document.getElementById("Java_menu").style.display = "none";
@@ -120,14 +127,15 @@ function rotateJava() {
     }
 }
 
-var flagMySQL = true;
-
 function rotateMySQL() {
     if (flagMySQL) {
         document.getElementById("MySQL").style.transition = ".2s";
         document.getElementById("MySQL").style.transform = "rotate(90deg)";
         document.getElementById("MySQL_menu").style.display = "block";
         flagMySQL = false;
+        document.getElementById("Java").style.transform = "rotate(0deg)";
+        document.getElementById("Java_menu").style.display = "none";
+        flagJava = true;
     } else {
         document.getElementById("MySQL").style.transform = "rotate(0deg)";
         document.getElementById("MySQL_menu").style.display = "none";
